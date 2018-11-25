@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".profile_activities.FriendsActivity">
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/friends_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:theme="@style/AppTheme.AppBarOverlay"
+        android:background="@color/colorAccent"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="55dp"
+        android:layout_marginBottom="55dp"
+        android:orientation="vertical">
+        <TextView
+            android:visibility="gone"
+            android:id="@+id/text_search"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:text="Поиск среди друзей"
+            android:textColor="@color/colorAccent"/>
+        <ListView
+            android:id="@+id/list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:listitem="@layout/friend_list_item"
+            android:divider="@android:color/transparent"
+            android:dividerHeight="1dp">
+
+        </ListView>
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/empty"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_gravity="center">
+        <ImageView
+            android:layout_gravity="center"
+            android:id="@+id/no_losses_image"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            app:srcCompat="@drawable/ic_people_black_24dp"
+            android:alpha="0.5"/>
+        <TextView
+            android:gravity="center_horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/items_no" />
+    </LinearLayout>
+    <android.support.design.widget.BottomNavigationView
+        android:id="@+id/navigation"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:background="?android:attr/windowBackground"
+        app:menu="@menu/navigation_friends"
+        android:layout_gravity="bottom"/>
+
+</android.support.design.widget.CoordinatorLayout>

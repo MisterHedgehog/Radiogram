@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    tools:context=".else_activities.AppActivity">
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:theme="@style/AppTheme.AppBarOverlay"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:background="@color/colorAccent"
+        app:title="О приложении">
+    </android.support.v7.widget.Toolbar>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:gravity="center_horizontal"
+                android:text="Radiogram"
+                android:textColor="@android:color/black"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:text="@string/app_info_text"
+                android:textColor="@android:color/black" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:gravity="center_horizontal"
+                android:text="Команда Radiogram"
+                android:textColor="@android:color/black"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <android.support.v7.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_weight="1"
+                    card_view:cardCornerRadius="3dp"
+                    card_view:cardElevation="2dp"
+                    card_view:cardUseCompatPadding="true"
+                    card_view:contentPadding="5dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="100dp"
+                            android:src="@drawable/me_1"
+                            app:civ_border_color="@color/colorAccent"
+                            app:civ_border_width="2dp" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="5dp"
+                            android:gravity="center_horizontal"
+                            android:text="Главный дезайнер" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_horizontal"
+                            android:text="Волков А.А." />
+                    </LinearLayout>
+                </android.support.v7.widget.CardView>
+
+                <android.support.v7.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    card_view:cardCornerRadius="3dp"
+                    card_view:cardElevation="2dp"
+                    card_view:cardUseCompatPadding="true"
+                    card_view:contentPadding="5dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="100dp"
+                            android:src="@drawable/me_2"
+                            app:civ_border_color="@color/colorAccent"
+                            app:civ_border_width="2dp" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="5dp"
+                            android:gravity="center_horizontal"
+                            android:text="Генеральный разработчик" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_horizontal"
+                            android:text="Волков А.А." />
+                    </LinearLayout>
+                </android.support.v7.widget.CardView>
+
+                <android.support.v7.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_weight="1"
+                    card_view:cardCornerRadius="3dp"
+                    card_view:cardElevation="2dp"
+                    card_view:cardUseCompatPadding="true"
+                    card_view:contentPadding="5dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="100dp"
+                            android:src="@drawable/me_3"
+                            app:civ_border_color="@color/colorAccent"
+                            app:civ_border_width="2dp" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="5dp"
+                            android:gravity="center_horizontal"
+                            android:text="Директор маркетинга" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_horizontal"
+                            android:text="Волков А.А." />
+                    </LinearLayout>
+                </android.support.v7.widget.CardView>
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/bag_button"
+                style="@style/Base.Widget.AppCompat.Button.Colored"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="20dp"
+                android:text="@string/tell_about_bag"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/privacy_button"
+                style="@style/Base.Widget.AppCompat.Button.Colored"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="@string/privacy_policy"
+                android:textStyle="bold" />
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

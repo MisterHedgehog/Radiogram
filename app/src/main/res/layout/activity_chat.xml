@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/fragment_chat"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorAccentVeryLight"
+    tools:context="com.MMGS.radiogram.chat_activities.ChatActivity">
+            <ListView
+                android:layout_marginTop="55dp"
+                android:id="@+id/list_of_messages"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:divider="@android:color/transparent"
+                android:dividerHeight="1dp"
+                android:stackFromBottom="true"
+                tools:listitem="@layout/message"
+                tools:listfooter="@layout/list_footer">
+            </ListView>
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:theme="@style/AppTheme.AppBarOverlay"
+        android:background="@color/colorAccent"
+        app:contentInsetStartWithNavigation="0dp"
+        android:gravity="center_vertical">
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/image"
+            android:layout_width="40dp"
+            android:layout_height="40dp" />
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="Глобальный чат"
+            android:gravity="center_vertical"
+            android:layout_marginLeft="15dp"
+            android:textSize="20sp"
+            android:textColor="@android:color/white"/>
+    </android.support.v7.widget.Toolbar>
+    <android.support.design.widget.CoordinatorLayout
+        android:id="@+id/input_layout"
+        android:background="@color/transparentWhite"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom">
+        <EditText
+            android:id="@+id/input"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="55dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="10dp"
+            android:hint="@string/input"
+            android:layout_marginEnd="55dp"
+            android:layout_marginStart="10dp"
+            android:inputType="none" />
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/fab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:fabSize="mini"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_gravity="end"
+            android:layout_marginEnd="10dp"
+            app:srcCompat="@drawable/ic_send_white_24dp">
+        </android.support.design.widget.FloatingActionButton>
+    </android.support.design.widget.CoordinatorLayout>
+</android.support.design.widget.CoordinatorLayout>

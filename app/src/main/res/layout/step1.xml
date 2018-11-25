@@ -1,0 +1,107 @@
+<android.support.v4.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+<LinearLayout
+    android:id="@+id/frag2"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="20dp"
+    android:gravity="center_horizontal">
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/reg_password_settings_1"
+        android:textColor="@color/colorGray"
+        android:textSize="18sp"
+        android:layout_marginBottom="16dp"/>
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:text="@string/reg_password_settings_2"
+        android:textColor="@color/colorGray"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/errorText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/reg_password_settings_3"
+        android:textColor="@color/colorGray"
+        android:textSize="14sp"
+        android:layout_marginBottom="16dp" />
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/layout_email"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:id="@+id/email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/email"
+            android:inputType="textEmailAddress"
+            android:maxLines="1"
+            android:singleLine="true"
+            android:textColor="@color/colorAccent"
+            android:digits="@string/alphabet"/>
+
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/layout_pas1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:id="@+id/pass_1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/password"
+            android:imeActionId="6"
+            android:imeOptions="actionUnspecified"
+            android:inputType="textPassword"
+            android:maxLines="1"
+            android:singleLine="true"
+            android:textColor="@color/colorAccent"
+            android:digits="@string/alphabet"/>
+
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/layout_pas2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp">
+
+        <EditText
+            android:id="@+id/pass_2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/password_2"
+            android:imeActionId="6"
+            android:imeOptions="actionUnspecified"
+            android:inputType="textPassword"
+            android:maxLines="1"
+            android:singleLine="true"
+            android:textColor="@color/colorAccent"
+            android:digits="@string/alphabet"/>
+
+    </android.support.design.widget.TextInputLayout>
+
+    <Button
+        android:id="@+id/next_reg"
+        style="@style/Base.Widget.AppCompat.Button.Colored"
+        android:layout_width="170dp"
+        android:layout_height="50dp"
+        android:text="@string/next" />
+</LinearLayout>
+</android.support.v4.widget.NestedScrollView>

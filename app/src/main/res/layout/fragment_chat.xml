@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/fragment_chat"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.MMGS.radiogram.main_activities.ChatFragment"
+    android:orientation="vertical">
+    <Button
+        android:id="@+id/add_chat_button"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        style="@style/Base.Widget.AppCompat.Button.Colored"
+        android:text="+ Создать диалог"/>
+        <ListView
+            android:id="@+id/list_of_chats"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:divider="@android:color/transparent"
+            android:dividerHeight="1dp"
+            tools:listitem="@layout/chat">
+        </ListView>
+</android.support.design.widget.CoordinatorLayout>

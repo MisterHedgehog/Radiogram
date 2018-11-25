@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar_table"
+            android:theme="@style/AppTheme.AppBarOverlay"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:background="@color/colorAccent"
+            app:title="Расписание">
+        </android.support.v7.widget.Toolbar>
+        <com.github.barteksc.pdfviewer.PDFView
+            android:id="@+id/pdfView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+    </LinearLayout>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Вы можете использовать виджет, который будет показывать расписание на главном экране"
+        android:layout_gravity="bottom"
+        android:gravity="center"
+        android:textSize="16sp"/>
+</FrameLayout>

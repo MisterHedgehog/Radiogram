@@ -1,0 +1,42 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="AppTheme.PhotoCutter" parent="Base.Theme.AppCompat">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:colorBackground">@android:color/white</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar">
+        <item name="android:colorBackground">@android:color/white</item>
+        <item name="android:actionMenuTextColor">@android:color/black</item>
+        <item name="android:textColor">@android:color/black</item>
+    </style>
+    // Для EditText в логин активити, обязательно в виде двух стилей
+    <style name="AppTheme.MyEditTextTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="colorControlNormal">@android:color/white</item> // цвет линии под текстом
+        <item name="colorControlActivated">@android:color/white</item> // цвет всего при вводе текста
+    </style>
+    <style name="AppTheme.StyleEditText" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="android:imeOptions">actionNext</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textColorHint">@android:color/white</item>
+        <item name="android:theme">@style/AppTheme.MyEditTextTheme</item>
+    </style>
+
+    <declare-styleable name="AvatarImageBehavior">
+        <attr name="finalYPosition" format="dimension" />
+        <attr name="startXPosition" format="dimension" />
+        <attr name="startToolbarPosition" format="dimension" />
+        <attr name="startHeight" format="dimension" />
+        <attr name="finalHeight" format="dimension" />
+    </declare-styleable>
+</resources>

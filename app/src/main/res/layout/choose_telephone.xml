@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="20dp">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="+375"
+        android:textSize="18sp"
+        android:layout_marginTop="22dp"/>
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="40dp"
+        android:layout_height="wrap_content">
+    <EditText
+        android:id="@+id/kod"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Код"
+        android:textSize="18sp"
+        android:inputType="number"
+        android:maxLines="1"
+        android:textColor="@color/colorAccent"
+        android:textAlignment="center"
+        android:digits="@string/numbers"/>
+    </android.support.design.widget.TextInputLayout>
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="200dp"
+        android:layout_height="wrap_content">
+        <EditText
+            android:id="@+id/number"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Номер"
+            android:textSize="18sp"
+            android:inputType="number"
+            android:maxLines="1"
+            android:textColor="@color/colorAccent"
+            android:digits="@string/numbers"/>
+    </android.support.design.widget.TextInputLayout>
+</LinearLayout>

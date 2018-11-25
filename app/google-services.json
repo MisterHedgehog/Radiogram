@@ -1,0 +1,63 @@
+{
+  "project_info": {
+    "project_number": "86441674484",
+    "firebase_url": "https://regtest-8e05b.firebaseio.com",
+    "project_id": "regtest-8e05b",
+    "storage_bucket": "regtest-8e05b.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:86441674484:android:095b58552c9351e6",
+        "android_client_info": {
+          "package_name": "com.MMGS.radiogram"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "86441674484-4cl5m072cmf37u37ah7ua4gtqfq8dvle.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.MMGS.radiogram",
+            "certificate_hash": "4d27f80ad6767464d3c284f7839ab22834281e0d"
+          }
+        },
+        {
+          "client_id": "86441674484-7pf9tsul322qqfeaual1npmo7rpsa39s.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.MMGS.radiogram",
+            "certificate_hash": "efa5c7480d04b511eac3b0f845217c5e940eda28"
+          }
+        },
+        {
+          "client_id": "86441674484-pb1tklcpsvb1h70n2fc5i482uhm7u056.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA4Fw-1dlCYwFeWhPsz6DaVgbUf2oEUZOw"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "86441674484-pb1tklcpsvb1h70n2fc5i482uhm7u056.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
