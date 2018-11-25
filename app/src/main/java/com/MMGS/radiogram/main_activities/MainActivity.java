@@ -147,7 +147,7 @@ public class MainActivity extends AppCompatActivity
         }
     }
     @Override
-    public boolean onNavigationItemSelected(MenuItem item) {
+    public boolean onNavigationItemSelected(@NonNull MenuItem item) {
         switch (item.getItemId()) {
             case R.id.news:
                 ShowFragment(FRAGMENT_HOME);
@@ -366,21 +366,27 @@ public class MainActivity extends AppCompatActivity
         FirebaseDatabase.getInstance().getReference().child("users").child(user.getUid()).addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                User u = dataSnapshot.getValue(User.class);
-                isUserAdmin = u.getRank().equals("admin");
-                headerEmail.setText(u.getuEmail());
-                headerName.setText(u.getuName() + " " + u.getuSurname());
-                // Добавляем фоновое изображение
-                FirebaseManager.downloadImage(context, "images", user.getUid(), "icon_big", (bitmap, fromData) -> {
-                    headerBackground.setImageBitmap(bitmap);});
-                // Добавляем изображение пользавателя на кругое поле
-                FirebaseManager.downloadImage(context, "images", user.getUid(), "icon", (bitmap, fromData) -> {
-                    headerImage.setImageBitmap(bitmap);
-                });
-                FirebaseManager.downloadImage(context, "images", "appbar", "appbar", (bitmap, fromData) -> {
-                    imageView.setImageBitmap(bitmap);
-                });
-                FirebaseManager.AddPointToAchievement(activity, rootLayout, user.getUid(),"alpha");
+                try {
+                    User u = dataSnapshot.getValue(User.class);
+                    isUserAdmin = u.getRank().equals("admin");
+                    headerEmail.setText(u.getuEmail());
+                    headerName.setText(u.getuName() + " " + u.getuSurname());
+                    // Добавляем фоновое изображение
+                    FirebaseManager.downloadImage(context, "images", user.getUid(), "icon_big", (bitmap, fromData) -> {
+                        headerBackground.setImageBitmap(bitmap);
+                    });
+                    // Добавляем изображение пользавателя на кругое поле
+                    FirebaseManager.downloadImage(context, "images", user.getUid(), "icon", (bitmap, fromData) -> {
+                        headerImage.setImageBitmap(bitmap);
+                    });
+                    FirebaseManager.downloadImage(context, "images", "appbar", "appbar", (bitmap, fromData) -> {
+                        imageView.setImageBitmap(bitmap);
+                    });
+                    FirebaseManager.AddPointToAchievement(activity, rootLayout, user.getUid(), "alpha");
+                } catch (Exception e){
+                    Toast.makeText(activity, "Error: Ошибка доступа к серверу\nJava: MainActivity:ControlNavigationView\n"
+                            + e.getMessage(), Toast.LENGTH_LONG).show();
+                }
             }
 
             @Override
